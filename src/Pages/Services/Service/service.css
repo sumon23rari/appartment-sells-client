@@ -1,0 +1,42 @@
+.catagory{
+    align-items: center;
+    justify-content: space-between;
+}
+.catagory .icon{
+    color: #bec7d8;
+    font-size: 20px;
+}
+.active{
+   background:  rgba(37, 181, 121, 0.1);
+   color: rgb(37, 181, 121);
+   border-radius: 2px;
+   display: inline-block;
+   font-size: 13px;
+   font-weight: 600;
+   padding: 4px 15px;
+}
+.deactive{
+    border-radius: 2px;
+   display: inline-block;
+   font-size: 13px;
+   font-weight: 600;
+   padding: 4px 15px;
+   background: rgba(255, 152, 0, 0.1);
+   color: rgb(255, 152, 0);;  
+}
+.locationClass{
+    text-align: left;
+    color: #72809d;
+}
+.text .button{
+    align-items: center;
+    justify-content: space-between;
+}
+.button button{
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    background: rgb(37, 181, 121);
+    color: #fff;
+}

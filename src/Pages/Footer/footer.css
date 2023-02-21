@@ -1,0 +1,11 @@
+.textIcon span{
+margin: 0 10px;
+font-size: 24px;
+margin-top: 20px;
+}
+.footer{
+    background-color: #122947;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0 20px 0;
+}

@@ -1,0 +1,17 @@
+/* awards page css */
+.awards{
+    background-color: #122947;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+.awardIcon{
+    background: hsla(0,0%,100%,.1);
+    border-radius: 4% 50%;
+    color: #fff;
+    font-size: 32px;
+    height: 100px;
+    line-height: 100px;
+    margin: 50px auto auto;
+    width: 100px;
+}

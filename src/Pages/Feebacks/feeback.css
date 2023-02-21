@@ -1,0 +1,71 @@
+.clientpart{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 22px;
+    position: relative;
+    padding: 15px 0 40px 0;
+}
+.clientpart:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 70px;
+    background: #122947;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.reviewCard{
+    border: 1px solid #ddd;
+    padding: 30px 15px;
+    margin: 0 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.reviewr{
+    display: flex;
+    margin-bottom: 5px;
+}
+.partImg img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.partText h4{    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    color: #292929;
+    margin-top: 18px; 
+    margin-left: 19%;
+    text-transform: uppercase;
+    
+    }
+    .partText p{
+        font-size: 15px;
+        line-height: 100%;
+        font-weight: 400;
+        color: #606060;
+        margin-left: 19%;
+        margin-top: -4px;
+        text-transform: capitalize;
+    }
+    .reviewText p{
+        font-size: 14px;
+        line-height: 24px;
+        color: #606060;
+        margin-bottom: 13px;
+    }
+    .center .slick-center .reviewCard{
+        background: #122947;    
+    }
+    .center .slick-center .partText h4{
+        color: orangered;
+        padding: 3px 0;
+    }
+    .center .slick-center .partText p{
+        color: orangered;
+    }
+    .center .slick-center .reviewText p{
+        color: #fff;
+    }
