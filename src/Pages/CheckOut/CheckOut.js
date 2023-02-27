@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useServiceDetail from '../../Hooks/useServiceDetail';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
 const CheckOut = () => {
     const {serviceId}=useParams();
-    const [service]=useServiceDetail();
+    const [service]=useServiceDetail(serviceId);
     const [user]=useAuthState(auth);
     const handlePlaceOrder=event=>{
         event.preventDefault()
@@ -34,7 +35,6 @@ const CheckOut = () => {
         <form onSubmit={handlePlaceOrder}>
             <input className='w-100 mb-2' type="text" name="name" value={user?.displayName} placeholder='name' required /><br />
             <input className='w-100 mb-2' type="email" name="email" value={user?.email} placeholder='email' required /><br />
-            <input className='w-100 mb-2' type="number" name="price" value={service?.price} placeholder='email' required /><br />
             <input className='w-100 mb-2' type="text" name="service" value={service?.status} placeholder='service' required /><br />
             <input className='w-100 mb-2' type="text" name="address" autocomplete="off" placeholder='address' required /><br />
             <input className='w-100 mb-2' type="number" name="number" placeholder='number' required /><br />

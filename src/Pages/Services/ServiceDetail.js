@@ -3,22 +3,17 @@ import { Link, useParams } from 'react-router-dom';
 import useSeviceDetail from '../../Hooks/useServiceDetail';
 import { AiFillHeart} from "react-icons/ai";
 import {IoLocation} from "react-icons/io5";
-import Loading from '../Shared/Loading/Loading';
 const ServiceDetail = () => {
     const {serviceId}=useParams();
+    console.log('serviceId',serviceId)
   const [service]=useSeviceDetail(serviceId);
-
   const {img,address1,address2,status,price,type,_id}=service;
-  console.log('img',img)
-//   if(!img){
-// return <Loading></Loading>
-//   }
     return (
         <div className=''>
             <div className="col-lg-4 mt-5 mx-auto">
              <h2><small>You are service to detail: {serviceId}</small></h2>
-        {/* <h3>{service?.name}</h3> */}
-        <img src={service?.img} alt="service.img" />
+     
+        <img className="w-50 mt-3" src={img} alt="service.img" />
         <br />
         <div className="text p-4">
                 <div className="catagory d-flex">
@@ -33,7 +28,7 @@ const ServiceDetail = () => {
                     
                 </div>
             </div>
-        <Link to={`/checkout/${serviceId}`}>
+        <Link to={`/checkOut/${serviceId}`}>
             <button className='btn btn-primary'>Proceed Checkout</button>
         </Link>
     </div>
